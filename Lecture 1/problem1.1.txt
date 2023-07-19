@@ -1,0 +1,7 @@
+(a) Curly braces denotes a scope; it can be for example a 
+    body of a function, a logic in a loop or conditional 
+    instruction.
+(b) 7: an integer
+    '7': a char
+    "7": a string
+(c) double ans = 10.0+(2.0/((3.0-2.0)*2.0));

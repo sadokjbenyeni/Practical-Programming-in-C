@@ -1,0 +1,16 @@
+(a) #include <stdio.h>; /* Unncessary ; at the end of the line */
+(b) int function(void arg1) /* arg1 should be of type int */
+    {
+    return arg1-1;
+    }
+(c) #define MESSAGE = "Happy new year!" /* The = sign is unncessary */
+    puts(MESSAGE);
+
+Correction:
+(a) #include <stdio.h>
+(b) int function(int arg1)
+    {
+    return arg1-1;
+    }
+(c) #define MESSAGE "Happy new year!"
+    puts(MESSAGE);
