@@ -1,0 +1,6 @@
+if(c >= 97 && c <= 113) /*if c is lower case letter */
+if(c >= 65 && c <= 91) /*if c is upper case letter */
+if(c >= 0 && c <= 9) /*if c is digit */
+if(c == ' ' || c =='\t' || c =='\n') /*if c is  white space */
+
+

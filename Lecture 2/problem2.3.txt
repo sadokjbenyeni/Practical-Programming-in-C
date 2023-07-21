@@ -1,0 +1,4 @@
+(a) int bits = val&0xF
+    if(bits==0x7 || bits==0xB || (bits>=0xD))
+(b) val = ((0xFF & val) << 8) | (val>>8)
+(c) val = (val >> 4) | ((val&0xF)<<12)

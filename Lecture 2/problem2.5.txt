@@ -1,0 +1,4 @@
+1- can't start a variable name with digit.
+2- '=' operator should be replaced with '=='
+3- Correct
+4- Correct
