@@ -1,0 +1,4 @@
+(a) Adding the prefix extern in dict.c for the_dictionary variable will solve the ambiguity,
+ which makes it look for the variable in dict.h and not creating a new instance.
+(b) The data needs to de declared static in order to limit it's scope to the same file.
+(c) gcc -O0 -Wall main.c dict.c -o dictionary.o

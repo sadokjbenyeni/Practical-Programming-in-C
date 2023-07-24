@@ -1,0 +1,54 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+#define NMAX 25
+static unsigned int results_buffer[NMAX];
+
+void fibonacci()
+{
+	/* here are the variables to set as registers */
+	register unsigned int a = 0;
+	register unsigned int b = 1;
+	register unsigned int c;
+	int n;
+
+	/* do not edit below this line */
+	results_buffer[0] = a;
+	results_buffer[1] = b;
+	for (n = 2; n < NMAX; n++) {
+		c = a + b;
+		results_buffer[n] = c; /* store code in results buffer */
+		a = b;
+		b = c;
+	}
+}
+
+int main(void) {
+	
+	register int n, ntests = 10000000;
+	clock_t tstart, tend;
+	double favg;
+
+	/* do profiling */
+	tstart = clock();
+	
+	for (n = 0; n < ntests; n++)
+		fibonacci();
+
+	tend = clock();
+	/* end profiling */
+
+	/* compute average execution time */
+	favg = ((double)(tend - tstart))/CLOCKS_PER_SEC/ntests;
+
+	/* print avg execution time in milliseconds */
+	printf("Avg. execution time: %g msec\n",favg*1000);
+	return 0;
+}
+
+/* (a) It took 5.39146e-05 msec */
+/* (b) It took 3.30494e-05 msec */
+/* (c) It took 3.32318e-05 msec */
+/* (d) Using registers enables faster access to memory and so lower execution time */
+
