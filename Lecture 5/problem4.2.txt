@@ -1,0 +1,12 @@
+(a) unsigned int strspn(const char *str, const char *delims) {
+    int i;
+    strEnd = str + array_length(str);
+    delimsEnd = delims + array_length(delims);
+
+    for(i = 0; (delims + i <= delimsEnd) && (str + i <= strEnd); i++)
+    {
+        if(*str++ != *delims++)
+            return i;
+    }
+    return array_length(str);
+}

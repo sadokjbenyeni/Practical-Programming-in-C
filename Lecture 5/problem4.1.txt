@@ -1,0 +1,22 @@
+(a) /* int *pElement - pointer to the element
+    int arr (type int[]) that is out-of-place */
+void shift_element(int *pElement) {
+    int *prevElement = pElement - 1;
+    int pvalue = *pElement;
+    while(pElement && *prevElement > pvalue)
+    {
+        *pElement = *prevElement;
+        pElement--;
+        prevElement--;
+    }
+    *pElement = pvalue;
+}
+
+(b) /* iterate until out of order element found:
+        shift the element, and countinue iterating */
+    void insertion_sort(void) {
+        int *pElement, *pEnd = arr + array_length(arr);
+        for(pElement = arr + 1; pElement < pEnd; pElement++)
+            if(*pElement < *(pElement - 1))
+                shift_element(pElement);
+    }
